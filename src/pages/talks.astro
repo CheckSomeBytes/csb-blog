@@ -1,0 +1,119 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const talks = [
+  {
+    year: "2025",
+    conferences: [
+      {
+        name: "BSides Boulder",
+        title: "Identity Crisis: Tracking Adversaries in AWS",
+        link: "https://www.youtube.com/watch?v=UpjAFYXcgeI&list=PLsslc29xwLE3su2rNX9-3Z1HWjMdMbWGL&index=11"
+      }
+    ]
+  },
+  {
+    year: "2024",
+    conferences: [
+      {
+        name: "Cactus Con",
+        title: "Clearing the Fog: Detection and Defense against Cloud Persistence Techniques",
+        link: "https://youtu.be/U2E4K4-LTco?list=PL4umh_7S4rRtebBlvz7_LLvUSYQIn-IP8&t=69"
+      }
+    ]
+  },
+  {
+    year: "2023",
+    conferences: [
+      {
+        name: "GrrCon",
+        title: "Clearing the Fog: Detection and Defense against Cloud Persistence Techniques",
+      },
+      {
+        name: "SANS Blue Team Summit",
+        title: "Ecosystem of Insights: Building Operation Dashboards That Enable Teams",
+        link: "https://www.youtube.com/watch?v=Wjjp870x0CQ"
+      },
+      {
+        name: "Cactus Con",
+        title: "A Peek Inside an Adversary's Toolkit",
+        link: "https://youtu.be/-J8fGMt6UmE?t=4704"
+      }
+    ]
+  },
+  {
+    year: "2022",
+    conferences: [
+      {
+        name: "Bsides Orlando",
+        title: "Keys to Staying Hidden: Defense Evasion with Windows Registry",
+        link: "https://youtu.be/VSOY-D3uMGs?t=6633"
+      },
+      {
+        name: "Circle City Con",
+        title: "Keys to Staying Hidden: Defense Evasion with Windows Registry",
+        link: "https://www.youtube.com/watch?v=7o8bBdZ4jMc"
+      },
+      {
+        name: "Fal.Con",
+        title: "Reentry through the Windows: Uncommon Persistence Techniques"
+      },
+      {
+        name: "Bsides SATX",
+        title: "Watching Kittens at Play: Dissecting an Iranian Nation State Interactive Intrusion",
+        link: "https://www.youtube.com/watch?v=xV1vdQ3OuBI"
+      }
+    ]
+  },
+  {
+    year: "2020",
+    conferences: [
+      {
+        name: "Bsides Idaho",
+        title: "Suspect Last Seen Wearing Admin Creds: Building an Investigative Mindset",
+        link: "https://www.youtube.com/watch?v=4Y6uDYIcjQA&t=2s"
+      }
+    ]
+  }
+];
+---
+
+<BaseLayout
+  title="Talks - Ryan Thompson"
+  description="Conference presentations and speaking engagements"
+  author="Ryan Thompson"
+  url="https://checksomebytes.com/talks"
+>
+  <div class="center max-w-3xl">
+    <header class="mb-8">
+      <h1 class="heading">Speaking Engagements</h1>
+      <p class="paragraph text-lg opacity-90">Conference presentations on cloud security, threat detection, and adversary tactics</p>
+    </header>
+
+    <div class="space-y-12">
+      {talks.map(yearGroup => (
+        <section>
+          <h2 class="sub-heading mb-6">{yearGroup.year}</h2>
+          <div class="space-y-6">
+            {yearGroup.conferences.map(talk => (
+              <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+                <h3 class="text-lg font-semibold mb-1">{talk.name}</h3>
+                <p class="paragraph text-sm mb-2">{talk.title}</p>
+                {talk.link && (
+                  <a
+                    href={talk.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sm text-accent hover:underline animation"
+                  >
+                    Watch Recording →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
