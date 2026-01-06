@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogFilter from "../components/BlogFilter";
+import type { BlogType } from "../content.config";
+
+const blogs: BlogType[] = await getCollection("blogs");
+blogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const allTags = [...new Set(blogs.flatMap((blog) => blog.data.tags))].sort();
+
+const blogData = blogs.map((blog) => ({
+  title: blog.data.title,
+  date: blog.data.date
+    .toLocaleDateString("en-GB", {
+      day: "numeric",
+      month: "short",
+    })
+    .slice(0, 11),
+  url: `/${blog.data.slug}`,
+  tags: blog.data.tags,
+}));
+---
+
+<BaseLayout
+  title="Blog"
+  description="All blog posts by CheckSomeBytes"
+  author="CheckSomeBytes"
+  url="https://checksomebytes.com/blog"
+>
+  <div class="center">
+    <h1 class="heading mb-6">Blog</h1>
+    <BlogFilter client:load blogs={blogData} allTags={allTags} />
+  </div>
+</BaseLayout>

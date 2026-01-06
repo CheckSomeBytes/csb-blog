@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Introduction from "../components/Introduction.astro";
+import Featured from "../components/Featured.astro";
+---
+
+<BaseLayout
+  title="CheckSomeBytes"
+  description="A blog about AWS security and cloud infrastructure."
+  author="CheckSomeBytes"
+  url="https://checksomebytes.com"
+>
+  <div class="center">
+    <section>
+      <Introduction />
+    </section>
+    <hr />
+    <section>
+      <Featured />
+    </section>
+  </div>
+</BaseLayout>

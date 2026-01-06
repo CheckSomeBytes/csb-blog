@@ -1,0 +1,205 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Resume - Ryan Thompson"
+  description="Senior Cloud Security Researcher and SANS Instructor"
+  author="Ryan Thompson"
+  url="https://checksomebytes.com/resume"
+>
+  <div class="center max-w-3xl">
+    <header class="mb-8">
+      <h1 class="heading">Ryan Thompson</h1>
+      <p class="text-xl opacity-90">Senior Cloud Security Researcher, SANS Instructor</p>
+      <p class="paragraph mt-2 opacity-70">Fort Collins, Colorado</p>
+      <div class="mt-4 flex flex-wrap gap-4 text-sm">
+        <a href="mailto:ryan@checksomebytes.com" class="hover:text-accent animation">ryan@checksomebytes.com</a>
+        <a href="https://www.linkedin.com/in/ryan-m-thompson" target="_blank" rel="noopener noreferrer" class="hover:text-accent animation">LinkedIn</a>
+      </div>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="sub-heading mb-4">Skills</h2>
+      <div class="flex flex-wrap gap-2">
+        {["AWS Security", "Microsoft Azure", "Security Operations", "Cloud Threat Detection", "Incident Response", "SIEM", "Log Analysis"].map(skill => (
+          <span class="rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">{skill}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="sub-heading mb-4">Certifications</h2>
+      <ul class="space-y-1 paragraph">
+        <li>GIAC Cloud Threat Detection (GCTD)</li>
+        <li>GIAC Certified Incident Handler (GCIH)</li>
+        <li>GIAC Cloud Forensic Responder (GCFR)</li>
+        <li>GIAC Advisory Board</li>
+        <li>Elastic Certified Engineer</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="sub-heading mb-6">Experience</h2>
+
+      <div class="space-y-8">
+        <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+          <h3 class="text-lg font-semibold">CrowdStrike</h3>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Senior Cloud Security Researcher (Overwatch R&D)</h4>
+              <span class="text-sm opacity-70">Mar 2023 - Present</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Research and emulate adversary activity across AWS and Azure</li>
+              <li>Build proof-of-concept solutions for threat hunting</li>
+              <li>Develop novel detection capabilities in the cloud control plane</li>
+              <li>Engineer log normalization and filtering for scalability without impeding threat detection</li>
+            </ul>
+          </div>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Senior Security Researcher</h4>
+              <span class="text-sm opacity-70">Feb 2022 - Feb 2023</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Conducted postmortem analysis of ongoing attacks by criminal and nation state actors</li>
+              <li>Investigated advanced hands-on intrusions to extract IOCs and uncover APT/criminal attack trends</li>
+              <li>Developed automation capabilities to reduce manual workload and improve analysis accuracy</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+          <h3 class="text-lg font-semibold">SANS Institute</h3>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">SEC541 Associate Instructor</h4>
+              <span class="text-sm opacity-70">Mar 2024 - Present</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Instruct SEC541: Cloud Security Threat Detection</li>
+              <li>Manage classroom in both virtual and in-person contexts</li>
+            </ul>
+          </div>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Teaching Assistant</h4>
+              <span class="text-sm opacity-70">Jul 2021 - Present</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Supporting SANS courses: SEC541, FOR509, FOR608</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+          <h3 class="text-lg font-semibold">Elastic</h3>
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Education Engineer - Cyber Security</h4>
+              <span class="text-sm opacity-70">Sep 2020 - Feb 2022</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Created new courses in security analytics, liaising with instructors and SMEs</li>
+              <li>Collaborated with development teams to create and update course materials</li>
+              <li>Conveyed domain-specific knowledge on security tools and Elastic Stack integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+          <h3 class="text-lg font-semibold">Alert Logic</h3>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Senior Security Analyst</h4>
+              <span class="text-sm opacity-70">Mar 2020 - Sep 2020</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Created and productized hunt/investigative processes for SOC analysts</li>
+              <li>Built log and network detection for emerging threats</li>
+              <li>Communicated security findings to technical and managerial stakeholders</li>
+            </ul>
+          </div>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Professional Security Analyst</h4>
+              <span class="text-sm opacity-70">Jan 2019 - Mar 2020</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Monitored IDS, firewall, netflow and log correlation tools for potential threats</li>
+              <li>Assisted customers with Incident Response and breach investigations</li>
+              <li>Provided mentorship and developed training programs for incoming SOC analysts</li>
+            </ul>
+          </div>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Security Analyst</h4>
+              <span class="text-sm opacity-70">Feb 2018 - Jan 2019</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Responded to security incidents by analyzing log and network traffic data</li>
+              <li>Improved AWS log visibility according to CIS guidelines</li>
+              <li>Configured SIEM using Regex for threat detection</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+          <h3 class="text-lg font-semibold">Hewlett Packard Enterprise</h3>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Systems Analyst</h4>
+              <span class="text-sm opacity-70">Jun 2015 - Dec 2017</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Primary administrator of direct procurement sourcing software</li>
+              <li>Conducted system integration testing and oversaw user acceptance testing</li>
+              <li>Developed and maintained business continuity plans</li>
+            </ul>
+          </div>
+
+          <div class="mt-4">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h4 class="font-medium">Strategic Procurement Analyst</h4>
+              <span class="text-sm opacity-70">Jan 2014 - Jun 2015</span>
+            </div>
+            <ul class="paragraph mt-2 list-disc space-y-1 pl-5 text-sm">
+              <li>Created functional proof of concepts for executive buy-in</li>
+              <li>Bridged business users and technical teams through requirements creation</li>
+              <li>Introduced and trained 150 employees on new procurement suite</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="sub-heading mb-4">Education</h2>
+      <div class="space-y-4">
+        <div>
+          <h3 class="font-medium">University of Houston</h3>
+          <p class="paragraph text-sm">Bachelor of Business Administration (BBA), Supply Chain Management</p>
+          <p class="text-sm opacity-70">2010 - 2013</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="sub-heading mb-4">Honors & Awards</h2>
+      <div class="flex flex-wrap gap-2">
+        {["SEC504 Challenge Coin", "FOR508 Challenge Coin", "FOR509 Challenge Coin", "FOR608 Challenge Coin", "SEC503 Challenge Coin"].map(award => (
+          <span class="rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">SANS {award}</span>
+        ))}
+      </div>
+    </section>
+  </div>
+</BaseLayout>

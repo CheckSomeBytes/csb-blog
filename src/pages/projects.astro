@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const projects = [
+  {
+    name: "aws-role-call",
+    url: "https://github.com/CheckSomeBytes/aws-role-call",
+    description: "AWS IAM role enumeration and analysis tool",
+  },
+  {
+    name: "aws-security-guard",
+    url: "https://github.com/CheckSomeBytes/aws-security-guard",
+    description: "Monitor configuration changes across AWS security services",
+  },
+  {
+    name: "aws-eod",
+    url: "https://github.com/CheckSomeBytes/aws-eod",
+    description: "AWS end-of-day reporting and compliance checks",
+  },
+];
+---
+
+<BaseLayout
+  title="Projects"
+  description="Open source projects by CheckSomeBytes"
+  author="CheckSomeBytes"
+  url="/projects"
+>
+  <div class="center">
+    <h1 class="heading">Projects</h1>
+    <ul class="mx-8 my-6 space-y-6">
+      {
+        projects.map((project) => (
+          <li class="border-b border-gray-200 pb-4 dark:border-gray-700">
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-lg font-semibold hover:text-accent animation"
+            >
+              {project.name}
+            </a>
+            <p class="paragraph mt-1 text-sm opacity-80">{project.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>
