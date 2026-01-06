@@ -9,6 +9,11 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   vite: {
     plugins: [tailwindcss(), vitePluginSvgr({})],
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
   },
   devToolbar: {
     enabled: false,

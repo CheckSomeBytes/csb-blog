@@ -90,25 +90,30 @@ const talks = [
       <p class="paragraph text-lg opacity-90">Conference presentations on cloud security, threat detection, and adversary tactics</p>
     </header>
 
-    <div class="space-y-12">
+    <div class="space-y-8">
       {talks.map(yearGroup => (
         <section>
-          <h2 class="sub-heading mb-6">{yearGroup.year}</h2>
-          <div class="space-y-6">
+          <h2 class="text-2xl font-semibold mb-2">{yearGroup.year}</h2>
+          <div class="space-y-4">
             {yearGroup.conferences.map(talk => (
               <div class="border-l-2 border-gray-200 pl-4 dark:border-gray-700">
-                <h3 class="text-lg font-semibold mb-1">{talk.name}</h3>
-                <p class="paragraph text-sm mb-2">{talk.title}</p>
-                {talk.link && (
-                  <a
-                    href={talk.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="text-sm text-accent hover:underline animation"
-                  >
-                    Watch Recording →
-                  </a>
-                )}
+                <h3 class="text-2xl font-semibold mb-1">{talk.name}</h3>
+                <div class="flex items-center gap-2">
+                  <p class="paragraph text-sm">{talk.title}</p>
+                  {talk.link && (
+                    <a
+                      href={talk.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="text-accent hover:opacity-70 transition-opacity flex-shrink-0"
+                      aria-label={`Watch ${talk.title} recording`}
+                    >
+                      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                      </svg>
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
