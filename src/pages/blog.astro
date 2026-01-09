@@ -15,8 +15,9 @@ const blogData = blogs.map((blog) => ({
     .toLocaleDateString("en-GB", {
       day: "numeric",
       month: "short",
+      year: "numeric",
     })
-    .slice(0, 11),
+    .slice(0, 15),
   url: `/${blog.data.slug}`,
   tags: blog.data.tags,
 }));
