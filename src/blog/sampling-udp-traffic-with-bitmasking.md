@@ -23,9 +23,13 @@ TCP connections can be sampled via the SYN-ACK handshake, which occurs exactly o
 tcp[13] & 0x3F = 0x12
 ```
 
+[![TCP SYN](/blog-images/UDPSampling-TCP-SYN.png)](/blog-images/UDPSampling-TCP-SYN.png)
+
 ## UDP Sampling Challenge
 
 Unlike TCP, UDP has no required handshake or flag-based filtering mechanism. The solution leverages IP checksum randomness for representative sampling since "the IP checksum is calculated from 11 fields in the IP header."
+
+[![UDP Header](/blog-images/UDPSampling-UDPHeader.png)](/blog-images/UDPSampling-UDPHeader.png)
 
 ## Why Not UDP Checksum?
 
@@ -34,6 +38,10 @@ UDP checksums proved unreliable for sampling because they're derived from only t
 ## IP Checksum Approach
 
 The IP checksum demonstrates sufficient randomness for sampling purposes. Bit-masking the final byte (`ip[11]`) allows selective capture:
+
+[![IP Header](/blog-images/UDPSampling-IPHeader.png)](/blog-images/UDPSampling-IPHeader.png)
+
+[![Bitmask Table](/blog-images/UDPSampling-bitmasktable.png)](/blog-images/UDPSampling-bitmasktable.png)
 
 | Filter | Approximate Capture Rate |
 |--------|--------------------------|
@@ -44,3 +52,7 @@ The IP checksum demonstrates sufficient randomness for sampling purposes. Bit-ma
 ## Validation Testing
 
 I tested this theory against a 16.6 million packet capture, confirming that IP checksum values distribute evenly across hex values and that filtered samples maintain similar traffic patterns to unfiltered data, proving the method's validity.
+
+[![Checksum Distribution](/blog-images/UDPSampling-ChecksumDistribution.png)](/blog-images/UDPSampling-ChecksumDistribution.png)
+
+[![Traffic Patterns](/blog-images/UDPSampling-TrafficPatterns.png)](/blog-images/UDPSampling-TrafficPatterns.png)

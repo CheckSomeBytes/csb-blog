@@ -56,7 +56,15 @@ The ECE is entirely hands-on and task-oriented with no multiple-choice questions
 ## Pro Tips
 
 1. **Collapse JSON sections** to verify nesting and reduce cognitive overload
+
+[![Collapse JSON](/blog-images/ElasticEngineerExam-collapse.png)](/blog-images/ElasticEngineerExam-collapse.png)
+
 2. **Develop bracket-hunting skills** to troubleshoot JSON structure errors
+
+[![Bracket Hunter](/blog-images/ElasticEngineerExam-BracketHunter.png)](/blog-images/ElasticEngineerExam-BracketHunter.png)
+
 3. **Verify implementations** using the Cat API to confirm configurations took effect
+
+[![Trust But Verify](/blog-images/ElasticEngineerExam-TrustButVerify.png)](/blog-images/ElasticEngineerExam-TrustButVerify.png)
 
 Hands-on Dev-Tools experience is the most crucial preparation factor.

@@ -23,6 +23,10 @@ Given recruiters typically spend only seconds reviewing resumes, every section m
 
 Formatting matters significantly; readable layouts with whitespace encourage skimming and information retention.
 
+[![Resume Example 1](/blog-images/ResumeTips-SimplifiedResume1.png)](/blog-images/ResumeTips-SimplifiedResume1.png)
+
+[![Resume Example 2](/blog-images/ResumeTips-SimplifiedResume2.png)](/blog-images/ResumeTips-SimplifiedResume2.png)
+
 ### Use Concise Language
 
 Rather than lengthy multi-clause sentences, shorter statements convey the same information more effectively without sacrificing substance.

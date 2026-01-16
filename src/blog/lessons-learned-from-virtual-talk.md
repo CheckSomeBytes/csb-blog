@@ -15,6 +15,8 @@ I share insights gained from presenting at BSides Idaho, a virtual infosec confe
 
 I discovered that comedy falls flat in virtual presentations. When attempting to point out ridiculous clip art (specifically a character I called the "World's Happiest Robber"), the joke fell FLAT because streaming platforms lack real-time voice chat feedback.
 
+[![World's Happiest Robber](/blog-images/LessonsLearnVirtual-Robber.png)](/blog-images/LessonsLearnVirtual-Robber.png)
+
 **Recommendation:** Rather than explicitly highlighting humorous elements, let the material speak for itself and integrate any attempted humor subtly into your core message.
 
 ## Lesson 2: Have Backup Plans
